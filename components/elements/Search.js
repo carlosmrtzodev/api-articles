@@ -3,7 +3,7 @@ import Button from "./Button";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { FaSearch } from "react-icons/fa";
-export default function Search() {
+export default function Search({ route }) {
   const router = useRouter();
   const [error, setError] = useState(false);
   const [inputValue, setInputValue] = useState("");
@@ -16,7 +16,7 @@ export default function Search() {
     e.preventDefault();
     inputValue === ""
       ? setError(true)
-      : router.push(`/search/${1}/${inputValue}`);
+      : router.push(`/search/${1}/${inputValue}${route}`);
   };
 
   return (

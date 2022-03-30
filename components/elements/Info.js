@@ -6,7 +6,7 @@ export default function Info({ params, size }) {
   return (
     <>
       <div className="search__info">
-        <Link href={`/search/${1}/${relevance}/${params}`}>
+        <Link href={`/search/${1}/${params}/${relevance}`}>
           <a>
             <Button type="button">Más relevantes</Button>
           </a>

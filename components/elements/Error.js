@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Button from "./Button";
-export default function Error({ text, notfound }) {
+import { useRouter } from "next/router";
+export default function Error({ text, notfound, redirect }) {
+  const router = useRouter();
+  redirect ? router.push(`/posts`) : null;
+
   return (
     <>
       <div className={`${notfound ? "page__error-container" : "page__error"}`}>

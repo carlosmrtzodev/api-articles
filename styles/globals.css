@@ -38,9 +38,14 @@
   .main__title {
     @apply font-sans font-bold sm:text-2xl text-xl text-text text-center;
   }
+  .second__title {
+    @apply font-sans font-bold sm:text-2xl text-xl text-text text-center;
+  }
+
   .strong__medium {
     @apply font-bold;
   }
+
   .form__search {
     @apply p-6 rounded-lg bg-container flex gap-2;
   }
@@ -86,6 +91,15 @@
   .search__results-container_categories-category {
     @apply px-3 py-1 bg-green inline font-sans font-medium sm:text-sm text-xs text-text rounded-full;
   }
+  .search__results-container_headline {
+    @apply font-mono sm:text-base text-sm text-text;
+  }
+  .search__results-container_excerpt {
+    @apply font-mono sm:text-base text-sm text-text;
+  }
+  .search__results-container_badge-author {
+    @apply px-4 py-2 bg-opacity inline font-sans font-medium sm:text-sm text-xs text-text rounded-full;
+  }
 
   .search__pagination {
     @apply pt-20 flex justify-center items-center gap-2;
@@ -99,5 +113,25 @@
 
   .page__loader {
     @apply text-9xl text-green text-center animate-spin;
+  }
+
+  .post__container {
+    @apply md:w-2/4 w-full mx-auto flex flex-col items-end gap-4;
+  }
+  .post__close-icon {
+    @apply text-2xl;
+  }
+
+  .page__footer {
+    @apply w-full h-16 bg-container;
+  }
+  .page__footer-container {
+    @apply lg:max-w-5xl lg:w-full w-3/4 h-full mx-auto flex items-center justify-end;
+  }
+  .page__footer-container_github {
+    @apply font-sans font-bold sm:text-xl text-lg text-text flex items-center gap-2;
+  }
+  .page__footer-container_github-icon {
+    @apply text-green;
   }
 }

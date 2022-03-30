@@ -1,19 +1,20 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import Info from "../../../components/elements/Info";
-import Error from "../../../components/elements/Error";
-import Grid from "../../../components/containers/Grid";
-import Search from "../../../components/elements/Search";
-import Loading from "../../../components/elements/Loading";
-import Section from "../../../components/containers/Section";
-import Pagination from "../../../components/elements/Pagination";
+import { useRouter } from "next/router";
+import Info from "../../../../components/elements/Info";
+import Grid from "../../../../components/containers/Grid";
+import Search from "../../../../components/elements/Search";
+import Loading from "../../../../components/elements/Loading";
+import Section from "../../../../components/containers/Section";
+import Pagination from "../../../../components/elements/Pagination";
 
 const DynamicResults = dynamic(
-  () => import("../../../components/elements/Results"),
+  () => import("../../../../components/elements/Results"),
   { loading: () => <Loading /> }
 );
 
-export default function SearchResults({ results, value, pagination }) {
+export default function SearchResultsRelevance({ results, value, pagination }) {
+  const router = useRouter();
   let page = Number(pagination);
 
   return (
@@ -21,14 +22,14 @@ export default function SearchResults({ results, value, pagination }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
-        <title>Búsqueda de Artículos</title>
+        <title>Artículos Más Relevantes</title>
         <meta
           name="description"
           content="API Rest Website with search products in Next.js with Tailwind."
         />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#00A400" />
-        <meta property="og:title" content="Búsqueda de Artículos" />
+        <meta property="og:title" content="Artículos Más Relevantes" />
         <meta property="og:url" content="pomodoro-app-sage.vercel.app/" />
         <meta property="og:image" content="/OGimage.png" />
         <meta
@@ -42,7 +43,7 @@ export default function SearchResults({ results, value, pagination }) {
       </Head>
 
       <Section>
-        <Search route="" />
+        <Search route="/relevance" />
       </Section>
 
       <Section>
@@ -70,19 +71,13 @@ export default function SearchResults({ results, value, pagination }) {
               page={page}
               params={value}
               pages={results.pages}
-              route=""
+              route="/relevance"
             />
           </>
         ) : results.data.length > 0 ? (
-          <Error
-            text="¡No hay artículos relacionados con el término de búsqueda!"
-            redirect={true}
-          />
+          router.push(`/posts`)
         ) : (
-          <Error
-            text="¡No existe la página a la que intentas ir!"
-            redirect={true}
-          />
+          router.push(`/posts`)
         )}
       </Section>
     </>
@@ -90,7 +85,7 @@ export default function SearchResults({ results, value, pagination }) {
 }
 export const getStaticProps = async ({ params }) => {
   const response = await fetch(
-    `https://beta.mejorconsalud.com/wp-json/mc/v3/posts?search=${params.value}&page=${params.page}`
+    `https://beta.mejorconsalud.com/wp-json/mc/v3/posts?search=${params.value}&page=${params.page}&orderby=${params.relevance}`
   );
 
   try {
@@ -112,7 +107,7 @@ export const getStaticProps = async ({ params }) => {
   }
 };
 export const getStaticPaths = async () => {
-  const paths = [{ params: { page: "1", value: "" } }];
+  const paths = [{ params: { page: "1", value: "", relevance: "relevance" } }];
 
   return {
     paths,
