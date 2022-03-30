@@ -1,7 +1,9 @@
 export default function Button({ children, type }) {
   return (
-    <button type={type} className="button">
-      {children}
-    </button>
+    <>
+      <button type={type} className="button__primary">
+        {children}
+      </button>
+    </>
   );
 }

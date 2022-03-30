@@ -1,22 +1,7 @@
 import Head from "next/head";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import Form from "../components/elements/Form";
-import Error from "../components/elements/Error";
+import Search from "../components/elements/Search";
 import Section from "../components/containers/Section";
 export default function Home() {
-  const router = useRouter();
-  const [error, setError] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-
-  const onChange = (e) => {
-    setInputValue(e.target.value);
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    inputValue === "" ? setError(true) : router.push(`/search/${inputValue}`);
-  };
-
   return (
     <>
       <Head>
@@ -25,15 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Section title="Buscar de Articulos.">
-        <Form change={onChange} submit={handleSubmit} />
-
-        {error && (
-          <Error
-            text="Error: Necesitas escribir una búsqueda"
-            notfound={false}
-          />
-        )}
+      <Section>
+        <Search />
       </Section>
     </>
   );

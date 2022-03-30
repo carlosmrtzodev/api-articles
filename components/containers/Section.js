@@ -1,10 +1,9 @@
-export default function Section({ children, title }) {
+export default function Section({ children }) {
   return (
-    <section className="section">
-      <div className="section__container">
-        <h1 className="section__title">{title}</h1>
-        {children}
-      </div>
-    </section>
+    <>
+      <section className="page__section">
+        <div className="page__section-container">{children}</div>
+      </section>
+    </>
   );
 }

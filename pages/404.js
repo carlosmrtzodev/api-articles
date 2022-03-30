@@ -10,8 +10,8 @@ export default function NotFound() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Section title="Error 404.">
-        <Error text="No se pudo encontrar esta página" notfound={true} />
+      <Section>
+        <Error text="404: No se pudo encontrar esta página" notfound={true} />
       </Section>
     </>
   );
