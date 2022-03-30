@@ -12,7 +12,6 @@ const DynamicResults = dynamic(
   () => import("../../../components/elements/Results"),
   { loading: () => <Loading /> }
 );
-
 export default function SearchResults({ results, value, pagination }) {
   let page = Number(pagination);
 
@@ -60,7 +59,7 @@ export default function SearchResults({ results, value, pagination }) {
                   categories={result.categories}
                   headline={false}
                   excerpt={false}
-                  link={false}
+                  author={false}
                   post={false}
                 />
               ))}

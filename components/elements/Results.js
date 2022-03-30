@@ -8,16 +8,17 @@ export default function Results({
   post,
   excerpt,
   headline,
-  link,
   author,
 }) {
   return (
     <>
       <div className="search__results-container">
-        <Link href={`${post ? link : `/posts/${id}}`}`}>
+        <Link href={`/posts/${id}`}>
           <a>
             <div className="search__results-container_image">
-              <Image src={image} alt={title} width={1024} height={640} />
+              <figure className="search__results-container_image-figure">
+                <Image src={image} alt={title} width={1024} height={640} />
+              </figure>
             </div>
 
             <div className="search__results-container_info">

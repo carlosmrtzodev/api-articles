@@ -1,8 +1,8 @@
 import Head from "next/head";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
 import Info from "../../../../components/elements/Info";
 import Grid from "../../../../components/containers/Grid";
+import Error from "../../../../components/elements/Error";
 import Search from "../../../../components/elements/Search";
 import Loading from "../../../../components/elements/Loading";
 import Section from "../../../../components/containers/Section";
@@ -12,9 +12,7 @@ const DynamicResults = dynamic(
   () => import("../../../../components/elements/Results"),
   { loading: () => <Loading /> }
 );
-
 export default function SearchResultsRelevance({ results, value, pagination }) {
-  const router = useRouter();
   let page = Number(pagination);
 
   return (
@@ -43,7 +41,7 @@ export default function SearchResultsRelevance({ results, value, pagination }) {
       </Head>
 
       <Section>
-        <Search route="/relevance" />
+        <Search route="relevance" />
       </Section>
 
       <Section>
@@ -61,7 +59,7 @@ export default function SearchResultsRelevance({ results, value, pagination }) {
                   categories={result.categories}
                   headline={false}
                   excerpt={false}
-                  link={false}
+                  author={false}
                   post={false}
                 />
               ))}
@@ -71,13 +69,19 @@ export default function SearchResultsRelevance({ results, value, pagination }) {
               page={page}
               params={value}
               pages={results.pages}
-              route="/relevance"
+              route="relevance"
             />
           </>
         ) : results.data.length > 0 ? (
-          router.push(`/posts`)
+          <Error
+            text="¡No hay artículos relacionados con el término de búsqueda!"
+            redirect={true}
+          />
         ) : (
-          router.push(`/posts`)
+          <Error
+            text="¡No existe la página a la que intentas ir!"
+            redirect={true}
+          />
         )}
       </Section>
     </>

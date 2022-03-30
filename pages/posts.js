@@ -56,6 +56,7 @@ export default function All({ results }) {
               headline={false}
               excerpt={false}
               link={false}
+              author={false}
               post={false}
             />
           ))}

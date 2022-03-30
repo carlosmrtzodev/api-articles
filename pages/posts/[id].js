@@ -10,7 +10,6 @@ const DynamicResults = dynamic(
   () => import("../../components/elements/Results"),
   { loading: () => <Loading /> }
 );
-
 export default function Post({ results }) {
   return (
     <>
@@ -49,7 +48,6 @@ export default function Post({ results }) {
             categories={results.categories}
             headline={results.headline}
             excerpt={results.excerpt}
-            link={results.link}
             author={results.author.name}
             post={true}
           />

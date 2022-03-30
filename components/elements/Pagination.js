@@ -6,7 +6,7 @@ export default function Pagination({ page, params, pages, route }) {
       <ul className="search__pagination">
         {page > 1 && (
           <>
-            <Link href={`/search/1/${params}${route}`}>
+            <Link href={`/search/1/${params}/${route}`}>
               <a>
                 <li className="search__pagination-links">
                   <FaAngleDoubleLeft />
@@ -17,7 +17,7 @@ export default function Pagination({ page, params, pages, route }) {
             <Link
               href={`/search/${
                 page === pages ? page - 2 : page - 1
-              }/${params}${route}`}
+              }/${params}/${route}`}
             >
               <a>
                 <li className="search__pagination-links">
@@ -29,7 +29,9 @@ export default function Pagination({ page, params, pages, route }) {
         )}
 
         <Link
-          href={`/search/${page === pages ? page - 1 : page}/${params}${route}`}
+          href={`/search/${
+            page === pages ? page - 1 : page
+          }/${params}/${route}`}
         >
           <a>
             <li
@@ -45,7 +47,9 @@ export default function Pagination({ page, params, pages, route }) {
         </Link>
 
         <Link
-          href={`/search/${page === pages ? page : page + 1}/${params}${route}`}
+          href={`/search/${
+            page === pages ? page : page + 1
+          }/${params}/${route}`}
         >
           <a>
             <li
@@ -60,13 +64,13 @@ export default function Pagination({ page, params, pages, route }) {
 
         {page === 1 && (
           <>
-            <Link href={`/search/${page + 2}/${params}${route}`}>
+            <Link href={`/search/${page + 2}/${params}/${route}`}>
               <a>
                 <li className="search__pagination-links">{page + 2}</li>
               </a>
             </Link>
 
-            <Link href={`/search/${page + 3}/${params}${route}`}>
+            <Link href={`/search/${page + 3}/${params}/${route}`}>
               <a>
                 <li className="search__pagination-links">{page + 3}</li>
               </a>
@@ -75,7 +79,7 @@ export default function Pagination({ page, params, pages, route }) {
         )}
 
         {page < pages && (
-          <Link href={`/search/${pages}/${params}${route}`}>
+          <Link href={`/search/${pages}/${params}/${route}`}>
             <a>
               <li className="search__pagination-links">
                 <FaAngleDoubleRight />

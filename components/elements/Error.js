@@ -3,8 +3,8 @@ import Button from "./Button";
 import { useRouter } from "next/router";
 export default function Error({ text, notfound, redirect }) {
   const router = useRouter();
-  redirect ? router.push(`/posts`) : null;
 
+  redirect ? router.push(`/posts`) : null;
   return (
     <>
       <div className={`${notfound ? "page__error-container" : "page__error"}`}>
