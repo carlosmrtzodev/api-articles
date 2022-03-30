@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 📄 Intro.
 
-## Getting Started
+<div align="center">
+API Rest Website with search products in Next.js with Tailwind. <br><br>
+</div>
 
-First, run the development server:
+[![API Articles Banner](./public/banner.png)]()
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## 💼 Used technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![](https://img.shields.io/badge/Markup-HTML-informational?style=for-the-badge&logo=html5&logoColor=E54222&color=E54222&labelColor=2b2d42)
+![](https://img.shields.io/badge/Style-CSS-informational?style=for-the-badge&logo=css3&logoColor=E54222&color=E54222&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-JavaScript-informational?style=for-the-badge&logo=JavaScript&logoColor=E54222&color=E54222&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-React.js-informational?style=for-the-badge&logo=react&logoColor=E54222&color=E54222&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-Next.js-informational?style=for-the-badge&logo=next.js&logoColor=E54222&color=E54222&labelColor=2b2d42)
+![](https://img.shields.io/badge/Style-Tailwind%20CSS-informational?style=for-the-badge&logo=Tailwind-CSS&logoColor=E54222&color=E54222&labelColor=2b2d42)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🚨 Forking this repo
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+You can fork this repo and please give me proper credit, enjoy :).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🛠 Installation & Set Up
 
-## Learn More
+1. Install dependencies
 
-To learn more about Next.js, take a look at the following resources:
+   ```sh
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Start the development server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```sh
+   npm run dev
+   ```
 
-## Deploy on Vercel
+## 🚀 Building and Running for Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Generate a production build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```sh
+   next build
+   ```
