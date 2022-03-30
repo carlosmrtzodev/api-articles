@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa";
 export default function Pagination({ page, params, pages, route }) {
+  console.log(route, params);
   return (
     <>
       <ul className="search__pagination">
         {page > 1 && (
           <>
-            <Link href={`/search/1/${params}/${route}`}>
+            <Link href={`/search/${page}/${params}/${route}`}>
               <a>
                 <li className="search__pagination-links">
                   <FaAngleDoubleLeft />
