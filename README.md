@@ -17,7 +17,7 @@ Articles App in Next.js with Tailwind and using a API REST.. <br><br>
 
 ## 🚨 Forking this repo
 
-You can fork this repo and please give me proper credit, enjoy :).
+You can fork this repo without no problem, enjoy :).
 
 ## 🛠 Installation & Set Up
 
