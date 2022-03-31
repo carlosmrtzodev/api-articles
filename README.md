@@ -4,16 +4,16 @@
 API Rest Website with search products in Next.js with Tailwind. <br><br>
 </div>
 
-[![API Articles Banner](./public/banner.png)]()
+[![API Articles Banner](./public/banner.jpeg)]()
 
 ## 💼 Used technologies
 
-![](https://img.shields.io/badge/Markup-HTML-informational?style=for-the-badge&logo=html5&logoColor=E54222&color=E54222&labelColor=2b2d42)
-![](https://img.shields.io/badge/Style-CSS-informational?style=for-the-badge&logo=css3&logoColor=E54222&color=E54222&labelColor=2b2d42)
-![](https://img.shields.io/badge/Code-JavaScript-informational?style=for-the-badge&logo=JavaScript&logoColor=E54222&color=E54222&labelColor=2b2d42)
-![](https://img.shields.io/badge/Code-React.js-informational?style=for-the-badge&logo=react&logoColor=E54222&color=E54222&labelColor=2b2d42)
-![](https://img.shields.io/badge/Code-Next.js-informational?style=for-the-badge&logo=next.js&logoColor=E54222&color=E54222&labelColor=2b2d42)
-![](https://img.shields.io/badge/Style-Tailwind%20CSS-informational?style=for-the-badge&logo=Tailwind-CSS&logoColor=E54222&color=E54222&labelColor=2b2d42)
+![](https://img.shields.io/badge/Markup-HTML-informational?style=for-the-badge&logo=html5&logoColor=00A400&color=00A400&labelColor=2b2d42)
+![](https://img.shields.io/badge/Style-CSS-informational?style=for-the-badge&logo=css3&logoColor=00A400&color=00A400&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-JavaScript-informational?style=for-the-badge&logo=JavaScript&logoColor=00A400&color=00A400&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-React.js-informational?style=for-the-badge&logo=react&logoColor=00A400&color=00A400&labelColor=2b2d42)
+![](https://img.shields.io/badge/Code-Next.js-informational?style=for-the-badge&logo=next.js&logoColor=00A400&color=00A400&labelColor=2b2d42)
+![](https://img.shields.io/badge/Style-Tailwind%20CSS-informational?style=for-the-badge&logo=Tailwind-CSS&logoColor=00A400&color=00A400&labelColor=2b2d42)
 
 ## 🚨 Forking this repo
 
