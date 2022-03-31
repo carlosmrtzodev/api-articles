@@ -1,7 +1,7 @@
 ## 📄 Intro.
 
 <div align="center">
-API Rest Website with search products in Next.js with Tailwind. <br><br>
+Articles App in Next.js with Tailwind and using a API REST.. <br><br>
 </div>
 
 [![API Articles Banner](./public/banner.jpeg)]()
