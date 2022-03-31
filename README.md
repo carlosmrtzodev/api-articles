@@ -4,7 +4,7 @@
 Articles App in Next.js with Tailwind and using a API REST.. <br><br>
 </div>
 
-[![API Articles Banner](./public/banner.jpeg)]()
+[![API Articles Banner](./public/banner.jpeg)](https://github.com/carlosmrtzodev/api-articles)
 
 ## 💼 Used technologies
 
